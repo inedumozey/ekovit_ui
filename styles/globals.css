@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --header-height: 60px;
+    --footer-height: 60px;
+    --sidebar-extend: 200px;
+    --sidebar-shrink: 55px;
+    --color-blue-1: #e8f0fe;
+    --color-blue-2: rgb(90, 180, 189);
+    --color-blue-3: rgb(20, 132, 143);
+    --color-blue-4: rgb(28, 68, 94);
+
+    --color-dark-1: #eff0f2;
+    --color-dark-2: #dadce0;
+    --color-dark-3: rgb(149, 156, 172);
+    --color-dark-4: rgb(54, 58, 69);
+    --color-dark-5: rgb(20, 20, 20);
+
+    --color-danger-text: #842029;
+    --color-danger-bg: #f5c2c7;
+
+    --sm: 500px;
+    --md: 640px;
+    --lg: 900px;
+    --xlg: 1024px;
+    --xxlg: 1554px;
+}
+
+.transition {
+    transition: all .3s ease-out;
+}
+
+/* wrapper on mobile screen */
+.wrapper {
+    @apply px-5
+}
+
+/* .focus-input:focus {
+    outline: none;
+    border: 3px solid green
+}
+
+.focus-input:focus+label {
+    background-color: green
+} */
+
+/* wrapper on tablet screen */
+@media screen and (min-width: 640px) {
+    .wrapper {
+        @apply px-10
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .hover-element:hover {
+        @apply w-[var(--sidebar-extend)];
+    }
+
+    .hover-element:hover .hover-effect-sidebar-content {
+        @apply hidden
+    }
+
+    .hover-element:hover~.hover-effect {
+        @apply ml-[var(--sidebar-extend)];
+    }
+}
