@@ -2,7 +2,9 @@ import React from 'react'
 import Skeleton from '../utils/Skeleton'
 
 
+
 export default function Landing() {
+
     return (
         <div className='flex gap-1 flex-wrap'>
             {

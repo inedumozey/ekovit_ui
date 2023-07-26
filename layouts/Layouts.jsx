@@ -27,6 +27,11 @@ export default function Layouts({ children }) {
     else if (router.asPath.includes('/auth')) {
         return <DefaultLayout contact={contact}>{children}</DefaultLayout>
     }
+    else {
+        return <>
+            {children}
+        </>
+    }
 
 }
 
